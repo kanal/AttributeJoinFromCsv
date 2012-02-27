@@ -1,0 +1,12 @@
+README for AttributeJoinFromCSV
+----------------------------------------
+
+AttributeJoinFromCSVはQuantum GIS (QGIS)のプラグインです。
+このプロジェクトは東京大学医学系研究科で利用することを目的として開発されたものをオープンソース化したものです。
+オープンソース化するにあたりご協力をいただきました北海道大学様及び東京大学大学院医学系研究科様に感謝の意を表します。
+
+AttributeJoinFromCSVはGNU Public License (GPL)のもと公開されています。
+このライセンスの下で、あなたが（あなたが望むなら）ソースコードの確認や改修を行うことが可能であることを保証します。
+ユーザーは、常に無料で利用することができ、自由に変更することができます。
+
+AttributeJoinFromCSVは、GitHubの https://github.com/kanal/AttributeJoinFromCsv にあります。

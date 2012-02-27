@@ -3,8 +3,14 @@ README for AttributeJoinFromCSV
 AttributeJoinFromCSV is a plugin for Quantum GIS (QGIS). This Project 
 is a thing that open source was developed for the purpose of use in the study group, 
 Graduate School of Medicine and Faculty of Medicine, The University of Tokyo.
-This plugin has been prepared in accordance with MMQGIS.
-(only Attribute Join from CSV File function)
+
+Represents our gratitude to the Graduate School of Medicine and Faculty of Medicine, The University of Tokyo, 
+Hokkaido University and gave Upon your cooperation to open source.
+
+AttributeJoinFromCSV is released under the GNU Public License (GPL). 
+Devloping AttributeJoinFromCSV under this license means that you can (if you want to) 
+inspect and modify the source code and guarantees that you, our happy user will
+always have access to a AttributeJoinFromCSV program that is free of cost and can be
+freely modified.
 
 AttributeJoinFromCSV is on GitHub at https://github.com/kanal/AttributeJoinFromCsv. 
-

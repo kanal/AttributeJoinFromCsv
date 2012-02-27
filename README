@@ -1,15 +1,10 @@
-##############################################
-    QGIS PLUGIN TEMPLATE DIRECTORY
+README for AttributeJoinFromCSV
+----------------------------------------
+AttributeJoinFromCSV is a plugin for Quantum GIS (QGIS). This Project 
+is a thing that open source was developed for the purpose of use in the study group, 
+Graduate School of Medicine and Faculty of Medicine, The University of Tokyo.
+This plugin has been prepared in accordance with MMQGIS.
+(only Attribute Join from CSV File function)
 
-              T.Sutton 2004
-##############################################
+AttributeJoinFromCSV is on GitHub at https://github.com/kanal/AttributeJoinFromCsv. 
 
-Please do not edit the files in this directory
-unless you know exactly what you are doing - 
-these files are used as the basis for creating
-new plugins. Altering these files may break
-the automated plugin template generation process.
-
-Please visit: http://mrcc.com/qgiswiki/PluginDevelopersGuide
-
-For more information on creating plugins.

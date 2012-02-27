@@ -15,7 +15,7 @@ AttributeJoinFromCsv::AttributeJoinFromCsv(QgisInterface* iface)
     : mIface(iface), mAction(0)
 {
     QTextCodec::setCodecForCStrings(QTextCodec::codecForLocale());
-
+    QTextCodec::setCodecForTr(QTextCodec::codecForLocale());
 }
 
 AttributeJoinFromCsv::~AttributeJoinFromCsv()
@@ -25,7 +25,7 @@ AttributeJoinFromCsv::~AttributeJoinFromCsv()
 
 void AttributeJoinFromCsv::initGui()
 {
-    mAction = new QAction(tr("&attribute join"), this);
+    mAction = new QAction(QIcon(":icons/icons/mmqgis_attribute_join.png"),tr("&attribute join"), this);
     connect(mAction, SIGNAL(activated()), this, SLOT(joinFromCsv()));
     mIface->addToolBarIcon(mAction);
     mIface->addPluginToMenu(tr("&attribute join"), mAction);
@@ -56,12 +56,13 @@ QGISEXTERN QString name()
 
 QGISEXTERN QString description()
 {
-    return "シェイプファイルにＣＳＶから属性を追加する";
+//    return "シェイプファイルにＣＳＶから属性を追加する";
+    return "attribute join to shape from csv";
 }
 
 QGISEXTERN QString version()
 {
-    return "0.00001";
+    return "0.9";
 }
 
 // Return the type (either UI or MapLayer plugin)

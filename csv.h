@@ -22,8 +22,8 @@ public:
         ~CSV();
 
         QString readLine();
-        QStringList parseLine();
-        static QStringList parseLine(QString line);
+        QStringList parseLine(bool useTab);
+        static QStringList parseLine(QString line, bool useTab);
 
         void setCodec(const char* codecName);
 private:

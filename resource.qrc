@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>icons/mmqgis_attribute_join.png</file>
+    </qresource>
+</RCC>

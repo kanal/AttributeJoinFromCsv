@@ -48,17 +48,26 @@ QString CSV::readLine(){
         return line;
 
 }
-QStringList CSV::parseLine(){
-        return parseLine(readLine());
+QStringList CSV::parseLine(bool useTab)
+{
+    return parseLine(readLine(), useTab);
 }
-QStringList CSV::parseLine(QString line){
+
+QStringList CSV::parseLine(QString line, bool useTab){
         QStringList list;
         int pos2 = 0;
-        QRegExp rx2("(?:^|,)(?:\"((?:[^\"]|\"\")*)\"|([^,\"]*))");
-        
+        QRegExp rx2;
+
+        if(useTab) {
+            rx2.setPattern("(?:^|\t)(?:\"((?:[^\"]|\"\")*)\"|([^\t\"]*))");
+        } else {
+            rx2.setPattern("(?:^|,)(?:\"((?:[^\"]|\"\")*)\"|([^,\"]*))");
+        }
+
         //TABÉoÅ[ÉWÉáÉì
         //QRegExp rx2("(?:^|\t)(?:"((?:[^"]|"")*)"|([^\t"]*))");
         //
+
         if(line.size()<1){
                 list << "";
         }else while (line.size()>pos2 && (pos2 = rx2.indexIn(line, pos2)) != -1) {

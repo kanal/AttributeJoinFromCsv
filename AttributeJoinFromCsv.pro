@@ -3,34 +3,38 @@
 # Project created by QtCreator 2011-12-20T08:22:54
 #
 #-------------------------------------------------
-QGIS_DIR = C:\Program Files\qgis1.6.0
-OSGEO4_W = D:\OSGEO4W
 
 QT       += xml qt3support
 
 TARGET = AttributeJoinFromCsv
 TEMPLATE = lib
 
-
 win32:LIBS += \
-"$$QGIS_DIR\lib\qgis_core.lib" \
-"$$QGIS_DIR\lib\qgis_gui.lib" \
-"$$OSGEO4_W\lib\geos_c_i.lib" \
-"$$OSGEO4_W\lib\gdal_i.lib" \
+#"$$(QGISHOME)\lib\qgis_core.lib" \
+#"$$(QGISHOME)\lib\qgis_gui.lib" \
+"D:\OSGEO4W4\apps\qgis\lib\qgis_core.lib" \
+"D:\OSGEO4W4\apps\qgis\lib\qgis_gui.lib" \
+"$$(QGISHOME)\..\..\lib\geos_c_i.lib" \
+"$$(QGISHOME)\..\gdal-17\lib\gdal_i.lib"
+
 
 INCLUDEPATH += \
-"$$OSGEO4_W\include" \
-"$$QGIS_DIR\include" \
+"$$(QGISHOME)\..\..\include" \
+#"$$(QGISHOME)\include" \
+"D:\OSGEO4W4\apps\qgis\include"
+
 
 DEFINES += GUI_EXPORT= CORE_EXPORT=
 
 SOURCES += AttributeJoinFromCsv.cpp \
     AttributeJoinDlg.cpp \
-    csv.cpp
+    csv.cpp \
+    ErrorLog.cpp
 
 HEADERS += AttributeJoinFromCsv.h \
     AttributeJoinDlg.h \
-    csv.h
+    csv.h \
+    ErrorLog.h
 
 symbian {
     MMP_RULES += EXPORTUNFROZEN
@@ -53,3 +57,9 @@ unix:!symbian {
 
 FORMS += \
     AttributeJoinDlg.ui
+
+OTHER_FILES += \
+    icons/mmqgis_attribute_join.png
+
+RESOURCES += \
+    resource.qrc
